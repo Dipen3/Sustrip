@@ -37,7 +37,7 @@ class Background {
      * Extension Installed
      */
     onInstalled = () => {
-        console.log('[===== Installed Extension!] =====');
+        console.log({==== Installed Extension!] =====');
     };
 
     /**
@@ -67,6 +67,16 @@ class Background {
     onMessageFromExtension = (msg: EXTMessage) => {
         console.log('[===== Message from Long Live Connection =====]');
     };
+        sendMessage = async (tab: Tabs.Tab, msg: EXTMessage) => {
+        try {
+            const res = await tabs.sendMessage(tab.id ?? 0, msg);
+            return res;
+        } catch (error) {
+            console.log(`[===== Error in sendMessage =====]`, error);
+            return null;
+        }
+    };
+}
 
     /**
      *
@@ -82,6 +92,11 @@ class Background {
      * @param {*} tabId
      * @param {*} changeInfo
      * @param {*} tab
+     class Background {
+    _port: number;
+    constructor() {
+        this.init();
+    }
      */
     onUpdatedTab = (tabId: number, changeInfo: Tabs.OnUpdatedChangeInfoType, tab: Tabs.Tab) => {
         console.log('[===== Tab Created =====]', tabId);
