@@ -3,38 +3,44 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
-import Link from '@mui/material/Link';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import MapIcon from '@mui/icons-material/Map';
-import SettingsIcon from '@mui/icons-material/Settings'
-import PersonIcon from '@mui/icons-material/Person';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import PeopleIcon from '@mui/icons-material/People';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton href="/">
+    <ListItemButton>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItemButton>
-    <ListItemButton href="/map">
+    <ListItemButton>
       <ListItemIcon>
-        <MapIcon />
-      </ListItemIcon >
-      <ListItemText primary="Map" />
-    </ListItemButton>
-    <ListItemButton href="/configure">
-      <ListItemIcon>
-        <SettingsIcon />
+        <ShoppingCartIcon />
       </ListItemIcon>
-      <ListItemText primary="Settings" />
+      <ListItemText primary="Orders" />
     </ListItemButton>
-    <ListItemButton href="https://public.tableau.com/views/SusTripDashboard/TransportationSummary?:language=en-US&:display_count=n&:origin=viz_share_link">
+    <ListItemButton>
       <ListItemIcon>
-        <PersonIcon />
+        <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="Analysis" />
+      <ListItemText primary="Customers" />
+    </ListItemButton>
+    <ListItemButton>
+      <ListItemIcon>
+        <BarChartIcon />
+      </ListItemIcon>
+      <ListItemText primary="Reports" />
+    </ListItemButton>
+    <ListItemButton>
+      <ListItemIcon>
+        <LayersIcon />
+      </ListItemIcon>
+      <ListItemText primary="Integrations" />
     </ListItemButton>
   </React.Fragment>
 );
@@ -48,19 +54,19 @@ export const secondaryListItems = (
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="This week" />
+      <ListItemText primary="Current month" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="This month" />
+      <ListItemText primary="Last quarter" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="This Year" />
+      <ListItemText primary="Year-end sale" />
     </ListItemButton>
   </React.Fragment>
 );
